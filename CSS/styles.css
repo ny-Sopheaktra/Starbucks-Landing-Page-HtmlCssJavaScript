@@ -160,7 +160,7 @@ header ul li a:hover {
 }
 
 .sci li a:hover {
-  transform: scaleX(1.02);
+  transform: scale(0.7);
 }
 
 .circle {
@@ -172,5 +172,3 @@ header ul li a:hover {
   background: #017143;
   clip-path: circle(600px at right 800px);
 }
-
-
