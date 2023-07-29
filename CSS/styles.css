@@ -98,7 +98,7 @@ header ul li a:hover {
   text-decoration: none;
 }
 .content .textBox a:hover {
-  background: #109e63;
+  transform: scale(1.04);
 }
 
 .content .imgBox {
@@ -171,4 +171,100 @@ header ul li a:hover {
   height: 100%;
   background: #017143;
   clip-path: circle(600px at right 800px);
+}
+
+/* Responsive styles css  */
+@media (max-width: 991px) {
+  header {
+    padding: 20px;
+  }
+
+  header ul {
+    position: relative;
+    display: none;
+  }
+
+  section {
+    padding: 20px 20px 120px;
+  }
+
+  .content {
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 15px;
+  }
+
+  .content .textBox h2 {
+    font-size: 2.5em;
+  }
+
+  .content .textBox {
+    max-width: 100%;
+  }
+
+  .content .imgBox {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .content .imgBox img {
+    max-width: 300px;
+  }
+  .thumb li img {
+    max-width: 40px;
+  }
+  .circle {
+    clip-path: circle(400px at center bottom);
+  }
+
+  .sci {
+    background-color: #017143;
+    right: 0;
+    width: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(../Images/menu.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    z-index: 11;
+  }
+
+  .toggle.active {
+    position: fixed;
+    right: 20px;
+    background: url(../Images/close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+  }
+
+  header ul.navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    z-index: 10;
+  }
+
+  header ul li a {
+    font-size: 1.4em;
+    margin: 5px 0;
+    color: rgb(90, 8, 138);
+  }
 }
